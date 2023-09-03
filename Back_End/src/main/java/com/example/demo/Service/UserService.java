@@ -9,28 +9,26 @@ import com.example.demo.Entity.UserEntity;
 import com.example.demo.Repositary.UserRepo;
 
 @Service
-public class UserService  implements UserServiceInterface{
+public class UserService implements UserServiceInterface {
 
 	@Autowired
 	private UserRepo userRepo;
 
 	@Override
 	public UserEntity addUserEntity(UserEntity userEntity) {
-		UserEntity savedUserEntity=userRepo.save(userEntity);
+		UserEntity savedUserEntity = userRepo.save(userEntity);
 		return savedUserEntity;
 	}
 
-	
 	@Override
 	public List<UserEntity> getAllUserEntity() {
 		return userRepo.findAll();
 	}
-	
+
 	@Override
 	public List<UserEntity> isUserEntityPresent() {
 		return userRepo.findAll();
 	}
-
 
 //	@Override
 //	public String isUserPresent(String email) {
@@ -38,27 +36,24 @@ public class UserService  implements UserServiceInterface{
 //	}
 	@Override
 	public Boolean existsByemail(String email) {
+		System.out.println("email" + email);
 		return userRepo.existsByEmail(email);
 	}
-
-
 
 	@Override
 	public Boolean isUserPresent(String email, String password) {
 		// TODO Auto-generated method stub
-		return userRepo.existsByEmailAndPassword(email,password);
+		System.out.println("email" + email);
+		System.out.println("password" + password);
+		return userRepo.existsByEmailAndPassword(email, password);
+
 	}
-
-
-	
 
 	@Override
 	public UserEntity getByEmail(String email) {
 		// TODO Auto-generated method stub
+		System.out.println("email" + email);
 		return userRepo.findByEmail(email);
 	}
-
-
-
 
 }
