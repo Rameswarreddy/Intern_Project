@@ -32,6 +32,7 @@ function Usernav(props) {
 
               <Link to="/" className="btn btn-danger"  type="submit"
                 href="/logout">Logout</Link>
+                {/* href="/logout">Logout</Link> */}
             </div>
           </div>
         </div>
