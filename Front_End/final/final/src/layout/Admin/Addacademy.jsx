@@ -8,7 +8,7 @@ const Addacademy = () => {
     <div>
       <Navmenu>
         <Container className="EditCourseform">
-        <h4 >* Enter Academy details *</h4>
+          <h4>* Enter Academy details *</h4>
           <div className="d-flex justify-content-center"></div>
           <Row>
             <Col className="mt-5">
@@ -64,7 +64,10 @@ const Addacademy = () => {
             </Col>
           </Row>
           <div className="d-flex justify-content-end">
-            <Button href="/Admin" className="bg-success px-2  mt-4">Add academy</Button>
+            <Button href="/Admin" className="bg-success px-2  mt-4">
+              Add Academy
+            </Button>
+            {/* <Button href="/Admin" className="bg-success px-2  mt-4">Add Academy</Button> */}
           </div>
         </Container>
       </Navmenu>
